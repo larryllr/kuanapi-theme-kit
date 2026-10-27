@@ -1,0 +1,44 @@
+/*
+  Copy this file into a theme override and change tokens first.
+  Do not add or remove product controls here. The host owns behavior; a theme
+  only changes presentation for the documented slots.
+*/
+:root[data-theme="your-theme-id"] {
+  --kuan-bg: #f7f8f7;
+  --kuan-surface: #ffffff;
+  --kuan-surface-muted: #eef1ef;
+  --kuan-ink: #18211d;
+  --kuan-muted: #68756d;
+  --kuan-line: #dfe6e1;
+  --kuan-accent: #1d7b59;
+  --kuan-accent-soft: #e3f2ea;
+  --kuan-accent-ink: #ffffff;
+  --kuan-user-bubble: #e3f2ea;
+  --kuan-danger: #a83c35;
+  --kuan-radius: 10px;
+  --kuan-control-radius: 7px;
+  --kuan-shadow: 0 12px 36px rgba(22, 44, 33, .08);
+  --kuan-font: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --kuan-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+/* Work is intentionally included: theme changes must not stop at Chat. */
+:is(.app-shell, .project-screen, .settings-panel, .artifact) {
+  color: var(--kuan-ink);
+  background: var(--kuan-bg);
+  font-family: var(--kuan-font);
+}
+:is(button, input, textarea, select) { font: inherit; }
+:is(.composer, .inline-panel, .artifact, .project-card, .project-composer, .work-inspector) {
+  border-color: var(--kuan-line);
+  border-radius: var(--kuan-radius);
+  box-shadow: var(--kuan-shadow);
+}
+:is(.model-trigger, .group-trigger, .reasoning-trigger, .project-action, .work-approval-toggle):is(:hover, :focus-visible) {
+  background: var(--kuan-accent-soft);
+  color: var(--kuan-accent);
+}
+:is(.send-button, .project-primary, .work-approval-toggle.active) {
+  background: var(--kuan-accent);
+  color: var(--kuan-accent-ink);
+}

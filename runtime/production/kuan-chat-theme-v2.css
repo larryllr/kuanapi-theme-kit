@@ -1,0 +1,812 @@
+/* KuanAPI Chat presentation extension.
+ * This file only styles the Chat boundary; it does not replace Sub2API assets.
+ */
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] {
+  --kuan-mono-bg: #ffffff;
+  --kuan-mono-panel: #f6f7f5;
+  --kuan-mono-surface: #ffffff;
+  --kuan-mono-surface-2: #f1f3ef;
+  --kuan-mono-hover: #e8ece6;
+  --kuan-mono-line: #dfe4dc;
+  --kuan-mono-text: #252a26;
+  --kuan-mono-muted: #6a746c;
+  --kuan-mono-accent: #3e6c52;
+  --kuan-mono-accent-soft: #eaf1e9;
+  --kuan-mono-user: #f1f3ee;
+  --kuan-mono-code: #f6f7f4;
+  --kuan-page-bg: var(--kuan-mono-bg) !important;
+  --kuan-panel-bg: var(--kuan-mono-surface) !important;
+  --kuan-accent: var(--kuan-mono-accent) !important;
+  --kuan-accent-hover: #315b43 !important;
+  --kuan-accent-soft: var(--kuan-mono-accent-soft) !important;
+  --kuan-text: var(--kuan-mono-text) !important;
+  color-scheme: light;
+  background: var(--kuan-mono-bg);
+  color: var(--kuan-mono-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] {
+    --kuan-mono-bg: #202120;
+    --kuan-mono-panel: #171917;
+    --kuan-mono-surface: #292c29;
+    --kuan-mono-surface-2: #303430;
+    --kuan-mono-hover: #363c36;
+    --kuan-mono-line: #3e453e;
+    --kuan-mono-text: #e8ece6;
+    --kuan-mono-muted: #abb4a8;
+    --kuan-mono-accent: #bed6b5;
+    --kuan-mono-accent-soft: #344430;
+    --kuan-mono-user: #30362e;
+    --kuan-mono-code: #1b201a;
+    color-scheme: dark;
+  }
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-sidebar {
+  width: 256px;
+  flex-basis: 256px;
+  background: var(--kuan-mono-panel);
+  border-right-color: var(--kuan-mono-line);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-sidebar-head {
+  padding: 25px 18px 16px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-brand strong {
+  color: var(--kuan-mono-text);
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-brand small,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-status-pill,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-balance-chip,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-empty p,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-attachment-meta small {
+  color: var(--kuan-mono-muted);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-new-chat {
+  min-height: 41px;
+  background: transparent;
+  color: var(--kuan-mono-text);
+  border: 1px solid var(--kuan-mono-line);
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-new-chat:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-conversation-item:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-quiet-row:hover {
+  background: var(--kuan-mono-hover);
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-conversation-item.active {
+  background: var(--kuan-mono-accent-soft);
+  color: var(--kuan-mono-accent);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-sidebar-foot,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-topbar {
+  border-color: var(--kuan-mono-line);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-topbar {
+  min-height: 70px;
+  background: var(--kuan-mono-bg);
+  padding-inline: 28px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-select-control,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-reasoning-select,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-model-select-control {
+  background: transparent;
+  border-color: transparent;
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-select-control:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-reasoning-select:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-model-select-control:hover {
+  background: var(--kuan-mono-hover);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-topbar-actions .kuan-icon-button,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings-launcher {
+  color: var(--kuan-mono-muted);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-topbar-actions .kuan-icon-button:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings-launcher:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message-actions button:hover {
+  background: var(--kuan-mono-hover);
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-thread {
+  background: var(--kuan-mono-bg);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message-list {
+  max-width: 780px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message {
+  gap: 15px;
+  padding: 14px 0 28px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message.assistant .kuan-message-body {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message.user .kuan-message-body {
+  max-width: 86%;
+  padding: 14px 18px;
+  border-radius: 16px 16px 3px 16px;
+  background: var(--kuan-mono-user);
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-markdown {
+  color: var(--kuan-mono-text);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-markdown a,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-citations {
+  color: var(--kuan-mono-accent);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-markdown :not(pre) > code,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-markdown pre {
+  background: var(--kuan-mono-code);
+  border-color: var(--kuan-mono-line);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-composer-wrap {
+  background: var(--kuan-mono-bg);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-composer {
+  border-color: var(--kuan-mono-line);
+  background: var(--kuan-mono-surface);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(26, 41, 32, .04);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-composer:focus-within {
+  border-color: color-mix(in srgb, var(--kuan-mono-accent) 48%, var(--kuan-mono-line));
+  box-shadow: 0 5px 20px rgba(32, 56, 39, .08);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-composer textarea,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-composer textarea::placeholder {
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-composer textarea::placeholder {
+  color: var(--kuan-mono-muted);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-send-button {
+  background: var(--kuan-mono-text);
+  color: var(--kuan-mono-bg);
+  box-shadow: none;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-send-button:disabled {
+  background: var(--kuan-mono-line);
+  color: var(--kuan-mono-muted);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message-avatar {
+  background: var(--kuan-mono-accent-soft);
+  color: var(--kuan-mono-accent);
+  border: 0;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message.assistant .kuan-message-avatar {
+  font-weight: 600;
+}
+
+.kuan-chat-shell .kuan-profile {
+  display: none !important;
+}
+
+.kuan-chat-shell .kuan-profile-menu {
+  display: none !important;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-modal-backdrop {
+  background: rgba(23, 28, 24, .28);
+  backdrop-filter: blur(2px);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings {
+  background: var(--kuan-mono-surface);
+  color: var(--kuan-mono-text);
+  border: 1px solid var(--kuan-mono-line);
+  border-radius: 16px;
+  box-shadow: 0 18px 60px rgba(15, 24, 18, .18);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings > header {
+  border-color: var(--kuan-mono-line);
+  background: color-mix(in srgb, var(--kuan-mono-surface) 94%, transparent);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings-body,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings-body :is(label, small, p) {
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings-body small,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings-body code {
+  color: var(--kuan-mono-muted);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings-body :is(select, textarea, input:not([type="range"]), .kuan-account-settings input) {
+  border-color: var(--kuan-mono-line);
+  background: var(--kuan-mono-surface);
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell .kuan-design-theme-setting,
+.kuan-chat-shell .kuan-account-settings {
+  padding: 16px;
+  border: 1px solid #e0e3dc;
+  border-radius: 12px;
+  background: #f6f7f5;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-design-theme-setting,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings {
+  border-color: var(--kuan-mono-line);
+  background: var(--kuan-mono-panel);
+}
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-design-theme-setting,
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-account-settings {
+  border-color: #e6ebf3;
+  background: #f7f9fc;
+}
+
+.kuan-design-theme-heading,
+.kuan-account-settings-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.kuan-design-theme-heading strong,
+.kuan-account-settings-heading strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.kuan-design-theme-heading small,
+.kuan-account-settings-heading small {
+  display: block;
+  margin-top: 4px;
+  color: #7c8b83;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-design-theme-heading small,
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-account-settings-heading small {
+  color: #7c8ba3;
+}
+
+.kuan-theme-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.kuan-theme-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #e0e3dc;
+  border-radius: 9px;
+  background: #fff;
+  color: #252a26;
+  text-align: left;
+  transition: border-color .18s, background .18s, transform .18s;
+}
+
+.kuan-theme-option:hover {
+  transform: translateY(-1px);
+  border-color: #99b19d;
+  background: #f8faf7;
+}
+
+.kuan-theme-option.is-active {
+  border-color: #3e6c52;
+  background: #eaf1e9;
+}
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-theme-option {
+  border-color: #e2e9f3;
+  background: #fff;
+  color: #263650;
+}
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-theme-option:hover {
+  border-color: #b9d1f4;
+  background: #f7faff;
+}
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-theme-option.is-active {
+  border-color: #1672ff;
+  background: #edf4ff;
+}
+
+.kuan-theme-preview {
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  grid-template-rows: repeat(3, 5px);
+  gap: 2px;
+  width: 42px;
+  height: 32px;
+  flex: 0 0 42px;
+  overflow: hidden;
+  padding: 4px;
+  border: 1px solid #dfe4dc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.kuan-theme-preview i {
+  display: block;
+  border-radius: 2px;
+  background: #dfe4dc;
+}
+
+.kuan-theme-preview i:first-child {
+  grid-row: 1 / span 3;
+  background: #3e6c52;
+}
+
+.kuan-theme-preview i:nth-child(2) { background: #f1f3ee; }
+.kuan-theme-preview i:nth-child(3) { background: #252a26; }
+.kuan-theme-preview-d-teacher i:first-child { background: #0a152d; }
+.kuan-theme-preview-d-teacher i:nth-child(2) { background: #edf3fc; }
+.kuan-theme-preview-d-teacher i:nth-child(3) { background: #1672ff; }
+
+.kuan-theme-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.kuan-theme-copy strong {
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kuan-theme-copy small {
+  overflow: hidden;
+  color: #7c8b83;
+  font-size: 10px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kuan-theme-check {
+  margin-left: auto;
+  color: #3e6c52;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.kuan-theme-option.is-active .kuan-theme-check { opacity: 1; }
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-theme-check {
+  color: #1672ff;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-theme-option {
+  border-color: var(--kuan-mono-line);
+  background: var(--kuan-mono-surface);
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-theme-option:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-theme-option.is-active {
+  border-color: var(--kuan-mono-accent);
+  background: var(--kuan-mono-accent-soft);
+  color: var(--kuan-mono-accent);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-profile-menu {
+  display: block !important;
+  position: static;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+}
+
+.kuan-chat-shell .kuan-account-settings .kuan-profile-menu {
+  display: block !important;
+  position: static;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-profile-menu > :first-child {
+  border-top: 0;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-menu-section,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-redeem-form {
+  border-color: var(--kuan-mono-line);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-menu-button,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-download-grid a,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-website-link {
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-menu-button:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-download-grid a:hover,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-account-settings .kuan-website-link:hover {
+  background: var(--kuan-mono-hover);
+  color: var(--kuan-mono-accent);
+}
+
+.kuan-provider-avatar {
+  display: grid;
+  place-items: center;
+  font: 700 9px/1 "Segoe UI", "PingFang SC", sans-serif;
+  letter-spacing: -.02em;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+.kuan-provider-avatar svg {
+  width: 62%;
+  height: 62%;
+  display: block;
+  pointer-events: none;
+}
+
+.kuan-provider-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+
+/* One native settings tree owns appearance, conversation and account controls. */
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-settings:not(.kuan-password-settings):not(.kuan-sync-settings) {
+  width: min(700px, 100%);
+  border-radius: 8px;
+}
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-settings-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-design-theme-setting,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-account-settings,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-settings-category {
+  min-width: 0;
+  padding: 22px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 0;
+}
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-design-theme-setting { order: -20; padding-top: 0; }
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-settings-category { display: grid; gap: 18px; }
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-account-settings { order: 20; }
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-local-update { order: 30; padding-top: 22px; }
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-settings-body > :is(kuan-chat-billing,kuan-web-accounts) { order: 40; }
+.kuan-chat-shell .kuan-settings-body h3 { font-size: 13px; line-height: 1.5; font-weight: 650; margin: 0 0 14px; color: inherit; }
+.kuan-chat-shell .kuan-theme-option { min-height: 70px; border-radius: 8px; }
+.kuan-chat-shell .kuan-theme-check { flex: 0 0 17px; width: 17px; height: 17px; }
+.kuan-chat-shell .kuan-account-content { display: grid; gap: 0; color: inherit; }
+.kuan-chat-shell .kuan-account-content .kuan-profile-summary { padding: 0 0 16px; background: none; }
+.kuan-chat-shell .kuan-account-content .kuan-menu-section { padding: 16px 0; border-top: 1px solid color-mix(in srgb,currentColor 10%,transparent); }
+.kuan-chat-shell .kuan-account-content .kuan-menu-button { display: flex; align-items: center; gap: 10px; min-height: 42px; padding: 9px 10px; border-radius: 6px; color: inherit; text-decoration: none; text-align: left; }
+.kuan-chat-shell .kuan-account-content .kuan-menu-button.danger { color: #c43b43; }
+.kuan-chat-shell .kuan-account-content .kuan-menu-button:hover { background: color-mix(in srgb,currentColor 6%,transparent); }
+.kuan-chat-shell .kuan-provider-avatar { letter-spacing: 0; }
+.kuan-chat-shell .kuan-provider-avatar svg, .kuan-chat-shell .kuan-provider-icon svg { width: 22px; height: 22px; display: block; flex: none; }
+.kuan-chat-shell .kuan-provider-icon { display: inline-grid; place-items: center; width: 18px; height: 18px; flex: none; color: inherit; user-select: none; }
+.kuan-chat-shell .kuan-provider-icon svg { width: 16px; height: 16px; }
+.kuan-chat-shell .kuan-composer-stack > .kuan-work-mode { width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; padding: 0 2px; }
+.kuan-chat-shell .kuan-composer-stack > .kuan-work-mode .kuan-work-approval-toggle { margin-left: auto; min-height: 32px; font-size: 12px; }
+.kuan-chat-shell .kuan-work-approval-toggle { display: inline-flex; align-items: center; gap: 7px; padding: 6px 10px; border: 1px solid color-mix(in srgb,currentColor 18%,transparent); border-radius: 6px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.kuan-chat-shell .kuan-work-approval-toggle::before { content: ''; width: 8px; height: 8px; border: 1px solid currentColor; border-radius: 50%; }
+.kuan-chat-shell .kuan-work-approval-toggle.active { color: #a85609; background: #fff3de; border-color: #e4c299; }
+.kuan-chat-shell .kuan-work-approval-toggle.active::before { background: currentColor; }
+.kuan-chat-shell .kuan-work-approval-toggle:disabled { opacity: .6; cursor: default; }
+@media(max-width: 440px) {
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-settings-body { padding: 18px; }
+  .kuan-chat-shell .kuan-theme-options { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .kuan-chat-shell .kuan-theme-option { flex-wrap: wrap; gap: 8px; padding: 12px; }
+  .kuan-chat-shell .kuan-theme-copy { flex: 1; }
+  .kuan-chat-shell .kuan-theme-copy small { white-space: normal; }
+}
+
+.kuan-provider-avatar[data-provider="anthropic"] svg { width: 66%; height: 66%; }
+.kuan-provider-avatar[data-provider="xai"] svg { width: 70%; height: 70%; }
+.kuan-provider-avatar[data-provider="google"] svg { width: 64%; height: 64%; }
+
+@media (max-width: 640px) {
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-topbar {
+    padding-inline: 14px;
+  }
+
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message.user .kuan-message-body {
+    max-width: 100%;
+  }
+
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings {
+    border-radius: 13px;
+  }
+
+  .kuan-theme-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message.assistant .kuan-message-body,
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-message.user .kuan-message-body {
+    animation: kuan-mono-message-in .24s cubic-bezier(.2, .7, .3, 1) both;
+  }
+
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-settings {
+    animation: kuan-mono-panel-in .22s cubic-bezier(.2, .7, .3, 1) both;
+  }
+}
+
+@keyframes kuan-mono-message-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kuan-mono-panel-in {
+  from { opacity: 0; transform: translateY(7px) scale(.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-settings-launcher {
+  color: #7c8ba3;
+}
+
+.kuan-chat-shell[data-kuan-design-theme="d-teacher"] .kuan-settings-launcher:hover {
+  background: #edf3fc;
+  color: #1672ff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Theme changes use one shared pixel-drift layer for every design theme. */
+.kuan-chat-shell.kuan-theme-transitioning {
+  visibility: hidden !important;
+}
+
+.kuan-theme-transition-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  overflow: hidden;
+  pointer-events: none;
+  background: transparent;
+  contain: strict;
+  isolation: isolate;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.kuan-theme-transition-layer canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  contain: strict;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kuan-chat-shell.kuan-theme-transitioning {
+    visibility: visible !important;
+  }
+  .kuan-theme-transition-layer {
+    display: none !important;
+  }
+}
+
+/* Match the standalone MONO workbench rhythm in the real Chat shell. */
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-sidebar {
+  width: 238px;
+  flex-basis: 238px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-sidebar-head {
+  padding: 22px 16px 12px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-sidebar-actions {
+  gap: 9px;
+  padding: 10px 16px 14px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-mark {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--kuan-mono-line);
+  background: var(--kuan-mono-surface);
+  color: var(--kuan-mono-accent);
+  box-shadow: 0 2px 7px rgba(29, 51, 41, .08);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-brand strong {
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-brand small {
+  color: var(--kuan-mono-muted);
+  font-size: 10px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-new-chat {
+  height: 42px;
+  border-color: var(--kuan-mono-line);
+  background: var(--kuan-mono-surface);
+  box-shadow: 0 3px 12px rgba(29, 51, 41, .04);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-new-chat:hover {
+  border-color: color-mix(in srgb, var(--kuan-mono-accent) 32%, var(--kuan-mono-line));
+  background: var(--kuan-mono-accent-soft);
+  color: var(--kuan-mono-accent);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-topbar {
+  min-height: 68px;
+  height: 68px;
+  padding-inline: 30px;
+  border-bottom-color: var(--kuan-mono-line);
+  background: color-mix(in srgb, var(--kuan-mono-bg) 94%, var(--kuan-mono-surface));
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-select-control {
+  border-color: transparent;
+  background: transparent;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-select-control:hover {
+  background: var(--kuan-mono-accent-soft);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-anchored-select-value,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-ref-brand,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-mobile-only {
+  color: var(--kuan-mono-text);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-attach-button,
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .ke-modern .kuan-effort-trigger {
+  background: var(--kuan-mono-surface);
+  border-color: var(--kuan-mono-line);
+  color: var(--kuan-mono-muted);
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-thread {
+  padding: 36px 32px 198px;
+}
+
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell[data-kuan-design-theme="mono"] .kuan-empty {
+  min-height: 65%;
+  max-width: 860px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0 32px 20px;
+}
+
+
+/* OpenAI welcome art occupies the former prompt area in every Chat theme. */
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-empty.kuan-openai-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+.kuan-openai-welcome > .kuan-empty-mark,
+.kuan-openai-welcome > h1,
+.kuan-openai-welcome > .kuan-prompt-grid {
+  display: none !important;
+}
+.kuan-openai-welcome-art {
+  display: flex;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+}
+.kuan-openai-welcome-art .kuan-punctuation-knot {
+  height: 100%;
+  aspect-ratio: auto;
+}
+.kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-thread:has(.kuan-openai-welcome) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.kuan-thread:has(.kuan-openai-welcome) > .kuan-message-list:empty {
+  display: none;
+}
+.kuan-openai-image-loader {
+  position: relative;
+  width: min(100%, 640px);
+  color: inherit;
+}
+.kuan-openai-image-loader .kuan-punctuation-knot {
+  max-height: 360px;
+}
+.kuan-knot-image-percent {
+  position: absolute;
+  bottom: 18px;
+  right: 24px;
+  font: 500 17px/1.4 "Cascadia Mono", Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 767px) {
+  .kuan-chat-shell.kuan-chat-shell.kuan-chat-shell .kuan-thread:has(.kuan-openai-welcome) { padding-inline: 12px; }
+}

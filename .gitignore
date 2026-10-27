@@ -1,0 +1,10 @@
+node_modules/
+dist/
+output/
+.playwright-cli/
+server.log
+server.log.err
+*.log
+*.tmp
+*.zip
+*.apk

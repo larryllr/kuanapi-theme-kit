@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="clear" data-appearance="system">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f7f8f7">
+    <title>宽 API Theme Kit · 主题工作台</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <script>
+      try {
+        const t = new URL(location.href).searchParams.get('theme') || localStorage.getItem('kuan-design-theme');
+        if (['clear', 'folio', 'studio', 'canvas', 'native', 'mono'].includes(t)) document.documentElement.dataset.theme = t;
+        document.documentElement.dataset.appearance = localStorage.getItem('kuan-design-appearance') || 'system';
+        const a = document.documentElement.dataset.appearance;
+        document.documentElement.dataset.color = a === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : a;
+      } catch {}
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./app.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div id="lab"></div>
+    <div id="app"></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <input id="file-input" type="file" multiple hidden>
+  </body>
+</html>

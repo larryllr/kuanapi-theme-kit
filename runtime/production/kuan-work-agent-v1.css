@@ -1,0 +1,27 @@
+.kuan-work-mode{display:flex;align-items:center;gap:4px;flex:none}
+.kuan-work-mode[hidden]{display:none}
+.kuan-work-mode-toggle,.kuan-work-project{height:32px;display:inline-flex;align-items:center;gap:7px;border:0;background:transparent;color:#64646c;font:inherit;font-size:12px;padding:0 8px;border-radius:6px;white-space:nowrap;cursor:pointer}
+.kuan-work-mode-toggle i{display:block;width:20px;height:12px;background:#d5d5da;border-radius:8px;position:relative;transition:background .18s}
+.kuan-work-mode-toggle i:after{content:"";position:absolute;left:2px;top:2px;width:8px;height:8px;border-radius:50%;background:white;transition:transform .18s}
+.kuan-work-mode-toggle.active{color:#16754c;background:#ebf6ef}
+.kuan-work-mode-toggle.active i{background:#268d62}
+.kuan-work-mode-toggle.active i:after{transform:translateX(8px)}
+.kuan-work-mode-toggle:disabled{opacity:.5;cursor:not-allowed}
+.kuan-work-approval-toggle{height:32px;display:inline-flex;align-items:center;border:1px solid #e4e5ea;background:transparent;color:#7a7b83;font:inherit;font-size:11px;padding:0 9px;border-radius:999px;white-space:nowrap;cursor:pointer;transition:color .18s,background .18s,border-color .18s,transform .18s}
+.kuan-work-approval-toggle:hover{transform:translateY(-1px);border-color:#c7c8d0}
+.kuan-work-approval-toggle.active{color:#8a4b12;background:#fff6e8;border-color:#e7bd80}
+.kuan-work-approval-toggle:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.kuan-message-actions{flex-wrap:wrap}
+.kuan-local-task{flex-basis:100%;min-width:0;width:100%;order:2;margin-top:8px;color:#44444d;font-size:12px;border-top:1px solid #e5e5e9;padding:8px 0}
+.kuan-local-task summary{display:flex;align-items:center;gap:8px;cursor:pointer;min-height:30px}
+.kuan-local-task summary small{margin-left:auto;color:#777780;font-size:11px}
+.kuan-local-task pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:260px;overflow:auto;background:#f4f4f6;padding:10px;border-radius:4px;font:11px/1.6 ui-monospace,monospace;color:#303039}
+.kuan-local-task button{display:inline-flex;align-items:center;gap:5px;border:1px solid #dedee4;background:#fff;color:#44444d;font:inherit;min-height:30px;padding:4px 9px;border-radius:4px;margin:4px 6px 4px 0;cursor:pointer}
+.kuan-local-task .kuan-work-error{color:#a53636;overflow-wrap:anywhere}
+.kuan-work-command{margin:10px 0 0;padding:9px 11px;background:#f7f3ea;border:1px solid #eadfcb;border-radius:6px;color:#5f4b2b;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}
+.kuan-work-command:before{content:'执行命令';display:block;margin-bottom:4px;color:#957242;font:600 10px/1.3 system-ui,sans-serif;letter-spacing:.02em}
+.kuan-work-approval{padding:8px 0;border-top:1px solid #e5e5e9}
+.kuan-work-plan{padding-left:20px;line-height:1.8}
+.kuan-work-plan [data-status="completed"]{color:#26815a}
+@media(max-width:420px){.kuan-work-mode-toggle{padding:0 5px;font-size:11px;gap:4px}.kuan-work-project{padding:0 5px;font-size:11px}.kuan-work-approval-toggle{padding:0 6px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.kuan-work-mode-toggle i,.kuan-work-mode-toggle i:after{transition:none}}
